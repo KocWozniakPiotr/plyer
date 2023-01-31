@@ -129,6 +129,7 @@ class AndroidNotification(Notification):
             noti = NotificationBuilder(activity)
         else:
             self._channel = self._build_notification_channel(title)
+            self._channel_id = self._build_notification_channel(title)
             noti = NotificationBuilder(activity, self._channel_id)
         return noti
 
